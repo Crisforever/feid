@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Web</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="text-center my-20 text-violet-700 text-6xl ">Mi cancion favorita de <span class="text-green-900 opacity-80">Feid</span></h1>
+    <!-- <h2 class="text-center text-gray-600">powered by <span class="text-blue-600">Tailwind</span></h2> -->
+
+    <img
+      src="https://yt3.googleusercontent.com/GUW78kIdMM2mVjl-c1rkSD8DqNYSRZAfTUTie3j4xKFN6agTpdb9UiMDGwQB2yuoDpKB1a8QNn8=s900-c-k-c0x00ffffff-no-rj"
+      alt="" class="w-80 mx-auto rounded-full ">
+  </header>
+  <main>
+    <section>
+      <article>
+        <div class=" px-2 bg-slate-900 w-80 mx-auto rounded-lg">
+
+          <img src="https://i.ytimg.com/vi/Qm_tHR9iwGo/maxresdefault.jpg" alt="Ultra solo portada"
+            class="w-80 mx-auto py-5 rounded-md">
+          <p class="text-white text-center my-5 text-xl">Ultra solo - Remix</p>
+          <p class="text-white text-xs my-2 px-3">De la Ghetto Polima WestCoast <br> Paillita Feid Paloma Mami</p>
+          <div class="flex justify-center py-5">
+
+              <button onclick="playAudio()" type="button"  class="mx-3 text-center border-solid border-x border-y border-white text-white rounded-full py-1 px-3 hover:opacity-70">Play</button>
+              <button onclick="pauseAudio()" type="button"  class="mx-3 text-center border-solid border-x border-y border-white text-white rounded-full py-1 px-3 hover:opacity-70">Pause</button> 
+          </div>
+        </div>
+      </article>
+
+      <audio
+        src="./source/ULTRA SOLO REMIX - Polimá Westcoast Pailita Paloma Mami Feid De la Ghetto (Video Oficial).mp3"
+        class="hidden"></audio>
+    </section>
+  </main>
+
+  <audio id="myAudio">
+    <source src="./source/ULTRA SOLO REMIX - Polimá Westcoast Pailita Paloma Mami Feid De la Ghetto (Video Oficial).mp3" type="audio/ogg">
+    <source src="./source/ULTRA SOLO REMIX - Polimá Westcoast Pailita Paloma Mami Feid De la Ghetto (Video Oficial).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+
+  <script>
+    var x = document.getElementById("myAudio");
+
+    function playAudio() {
+      x.play();
+    }
+
+    function pauseAudio() {
+      x.pause();
+    } 
+  </script>
+
+</body>
+
+</html>
